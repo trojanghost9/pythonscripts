@@ -1,1 +1,7 @@
-print "this is a test and it worked"
+a = 1
+b = 2
+c = 3
+
+result = c * b - a
+
+print result
