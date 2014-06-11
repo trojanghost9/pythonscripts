@@ -14,7 +14,7 @@ def lookup(domain_list, registrar_list):
 		registrar = whois.whois(domain).registrar
 		registrar_list.write("Domain name: " + domain) 
 		registrar_list.write("Registrar(s):")
-		registrar_list.write(registrar)
+        registrar_list.write(registrar)
 		registrar_list.write(" ")
 		registrar_list.write("-----------------------")
 		registrar_list.write(" ")
@@ -22,10 +22,10 @@ def lookup(domain_list, registrar_list):
 if __name__ == "__main__":
 	import whois
 
-    domain_list = open("domain_list.txt", "r")
-    registrar_list = open("registrar_list.txt", "a")
+domain_list = open("domain_list.txt", "r")
+registrar_list = open("registrar_list.txt", "a")
 
-    lookup(domain_list, registrar_list)
+lookup(domain_list, registrar_list)
 
-    domain_list.close()
-    registrar_list.close()
+domain_list.close()
+registrar_list.close()
