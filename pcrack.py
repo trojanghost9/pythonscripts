@@ -1,4 +1,5 @@
 import crypt
+import hashlib
 
 def testpass(cryptpass):
     salt = cryptpass[0:2]
@@ -18,6 +19,7 @@ def main():
         if ":" in line:
             user = line.split(':')[0]
             cryptpass = line.split(':')[1].strip(' ')
+            print cryptpass
             print "[*] Cracking Password For: " + user
             testpass(cryptpass)
 if __name__ == "__main__":
