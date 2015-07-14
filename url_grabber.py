@@ -29,9 +29,13 @@ if __name__ == "__main__":
         ### Parse and find
         ### Looks like google contains URLs in <cite> tags.
         ### So for each cite tag on each page (10), print its contents (url)
+        list = []
         for text in soup.findAll('img'):
-            pattern = r'src=.(http\S{1,}).'
+            pattern = r'src="(http\S{1,})"'
 	    link = re.findall(pattern, str(text))
 	    # this needs work, prints out in ugly format and leaves brackets
             # may also wanna look at using this https://developers.google.com/custom-search/json-api/v1/overview?csw=1
             print link
+	    list += link
+
+    # print list
