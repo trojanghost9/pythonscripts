@@ -25,7 +25,7 @@ def capture():
     Uses defined searchterm to grab related image urls from google.
     """
 
-    # Set count to 0
+    # Set count to 0, used for file names
     count = 0
 
     for start in range(0, 15):
