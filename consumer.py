@@ -4,5 +4,12 @@ from generator import add
 
 generator = add()
 
-for result in generator:
-    print result
+# app decorator for memory profiling
+# @profile
+def dothething():
+    for result in generator:
+        print result
+
+if __name__ == '__main__':
+    dothething()
+
