@@ -44,8 +44,8 @@ def capture():
 
         # Iterate for each result and get unescaped url
         for myUrl in datainfo:
-            count += 1
             print myUrl['unescapedUrl']
+            # count += 1
             # use if you want to save a copy of the image
             # myopener.retrieve(myUrl['unescapedUrl'],str(count)+'.jpg')
 
