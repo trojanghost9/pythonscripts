@@ -1,6 +1,7 @@
 import crypt
 import hashlib
 
+
 def testpass(cryptpass):
     salt = cryptpass[0:2]
     dictfile = open('dictionary.txt', 'r')
@@ -8,10 +9,11 @@ def testpass(cryptpass):
         word = word.strip('\n')
         cryptword = crypt.crypt(word.salt)
         if (cryptword == cryptpass):
-            print "[+] Found Password: "+word+"\n"
+            print "[+] Found Password: " + word + "\n"
             return
     print "[-] Password Not Found.\n"
     return
+
 
 def main():
     passfile = open('passwords.txt')
