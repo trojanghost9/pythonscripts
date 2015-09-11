@@ -17,4 +17,4 @@ with open('list.txt', 'r') as f:
 
 for k,v in ipdic.iteritems():
     if v > 1:
-        print k
+        print str(k) + " count: " + str(v)
