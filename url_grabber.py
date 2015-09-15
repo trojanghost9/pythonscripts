@@ -1,5 +1,3 @@
-import os
-import sys
 import time
 from urllib import FancyURLopener
 import urllib2
@@ -22,7 +20,7 @@ myopener = MyOpener()
 
 def capture():
     """
-    Uses defined searchterm to grab related image urls from google.
+    Uses defined search term to grab related image urls from google.
     """
 
     # Set count to 0, used for file names
