@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 def demscripts():
     """
-    alows user to paste a url and will print out any js if the site resolves
+    allows user to paste a url and will print out any js if the site resolves
     :return:
     """
     url = raw_input('Please enter the reported url: ')
@@ -18,7 +19,7 @@ def demscripts():
         # soup it up!
         soup = BeautifulSoup(source)
 
-        # use for if statment to look for js
+        # use for if statement to look for js
         if soup.script is None:
             print 'No javascript here brah'
         else:
