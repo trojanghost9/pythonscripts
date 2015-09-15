@@ -1,4 +1,5 @@
 import re
+import os
 import webbrowser
 
 
@@ -40,7 +41,7 @@ def ip_grabbing():
         ips_file.write(html_end_message)
 
     print "All done! :-)"
-    filename = 'file:///home/ray/pythonscripts/ips.html'
+    filename = os.getcwd() + '/ips.html'
     webbrowser.open_new_tab(filename)
 
 if __name__ == '__main__':
