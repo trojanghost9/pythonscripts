@@ -23,7 +23,8 @@ def ip_grabbing():
                     ip_dictionary[ip] = 1
 
     # sorting IP results based on number of occurrence
-    ips_sorted = sorted(ip_dictionary.items(), key=lambda item: item[1])
+    ips_sorted = sorted(ip_dictionary.items(), key=lambda item: item[1], reverse=True)
+    print ips_sorted
 
     with open('ips.html', 'w+') as ips_file:
         html_start_message = '''<!doctype html><head><script language="JavaScript">''' + \
@@ -36,7 +37,7 @@ def ip_grabbing():
         for k, v in ips_sorted:
             if v > 1:
                 print str(k) + " count: " + str(v)
-                ips_file.write("<tr><td>" + str(k) + "</td><td>" + str(v) + "</td></tr>")
+                ips_file.write('<tr><td bgcolor="#00FF00">' + str(k) + '</td><td bgcolor="#87CEFA">' + str(v) + "</td></tr>")
 
         ips_file.write(html_end_message)
 
