@@ -17,7 +17,7 @@ def demscripts():
         source = r.text
 
         # soup it up!
-        soup = BeautifulSoup(source)
+        soup = BeautifulSoup(source, "lxml")
 
         # use for if statement to look for js
         if soup.script is None:
