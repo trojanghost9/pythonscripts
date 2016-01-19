@@ -7,7 +7,7 @@ make sure to incluse subdomain if required
 """
 
 # domain to search
-domain = "punlife.com"
+domain = "paypal.com"
 
 # sets file name to the date it was checked
 filename = str(datetime.datetime.now()).replace(" ",".") + ".txt"
