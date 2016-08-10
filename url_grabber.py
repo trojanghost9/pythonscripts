@@ -4,7 +4,7 @@ import urllib2
 import simplejson
 
 # Define search term
-searchTerm = "roger meme"
+searchTerm = "meme"
 
 # Replace spaces ' ' in search term for '%20' in order to comply with request
 searchTerm = searchTerm.replace(' ', '%20')
@@ -34,9 +34,11 @@ def capture():
         # print url
         request = urllib2.Request(url, None, {'Referer': 'testing'})
         response = urllib2.urlopen(request)
+        print response
 
         # Get results using JSON
         results = simplejson.load(response)
+        print results
         data = results['responseData']
         datainfo = data['results']
 
