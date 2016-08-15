@@ -20,5 +20,5 @@ ip = splitstuff[3]
 print ip
 
 # write results to filename based on time
-with open (filename, 'w+') as f:
+with open(filename, 'w+') as f:
     f.write(ip)
