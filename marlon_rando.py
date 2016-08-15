@@ -1,7 +1,9 @@
 # Privacy is not something that I'm merely entitled to, it's an absolute prerequisite. -MB
 
-import random, string
+import random
+import string
 from time import sleep
+
 
 def id_generator(size=6, chars=string.letters + string.punctuation + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
