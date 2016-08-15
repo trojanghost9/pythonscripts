@@ -26,8 +26,9 @@ def convert():
         integer_address = (int(first) * (256**3)) + (int(second) * (256**2)) + (int(third) * 256) + int(forth)
 
         print "http://" + str(integer_address)
-    except IndexError:
-        print ("You need to enter a valid IPv4 address. i.e. 127.0.0.1")
+    except Exception as e:
+        print e, "- You need to enter a valid IPv4 address. i.e. 127.0.0.1"
+
 
 if __name__ == "__main__":
     convert()
