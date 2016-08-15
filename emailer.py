@@ -16,7 +16,5 @@ try:
     smtpObj.login("email@someemail.tld", "somepassword")
     smtpObj.sendmail(sender, receivers, message)
     print "Successfully sent email"
-except:
-    print "Error: unable to send email"
-
-
+except Exception as e:
+    print e, "Unable to send email"
