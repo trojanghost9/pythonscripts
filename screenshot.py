@@ -19,8 +19,8 @@ usock = urllib2.urlopen(url)
 data = usock.read()
 usock.close()
 
-with open('test.txt', "wb") as file:
-    file.write(data)
+with open('test.txt', "wb") as sourcefile:
+    sourcefile.write(data)
 
 
 
