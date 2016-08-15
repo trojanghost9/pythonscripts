@@ -5,7 +5,7 @@ def check():
     """
     checks a list of url's against Spamhaus's SBL - urllist.txt
     the list must be full path and include http://
-    GoDaddy SBL http://www.spamhaus.org/sbl/listings/godaddy.com
+    http://www.spamhaus.org/sbl/listings/{domain_provider} i.e. godaddy.com
     :return: url's that are listed
     """
     checker = SpamHausChecker()
