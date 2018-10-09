@@ -17,7 +17,7 @@ results = socket.getaddrinfo(domain, 80, 0, 0, socket.IPPROTO_TCP)
 splitstuff = str(results).split("'")
 ip = splitstuff[3]
 
-print ip
+print(ip)
 
 # write results to filename based on time
 with open(filename, 'w+') as f:
