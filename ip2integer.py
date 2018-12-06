@@ -13,7 +13,7 @@ def convert():
     integer_address = the IP converted to an integer
     :return: the IPv4 address as an integer address
     """
-    ip = raw_input("enter an IPv4 IP address: ")
+    ip = input("enter an IPv4 IP address: ")
     try:
         IP(ip)
         ip_split = ip.split(".")
@@ -25,9 +25,9 @@ def convert():
 
         integer_address = (int(first) * (256**3)) + (int(second) * (256**2)) + (int(third) * 256) + int(forth)
 
-        print "http://" + str(integer_address)
+        print("http://" + str(integer_address))
     except Exception as e:
-        print e, "- You need to enter a valid IPv4 address. i.e. 127.0.0.1"
+        print(e, "- You need to enter a valid IPv4 address. i.e. 127.0.0.1")
 
 
 if __name__ == "__main__":
