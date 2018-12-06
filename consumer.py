@@ -8,7 +8,7 @@ generator = add()
 # @profile
 def dothething():
     for result in generator:
-        print result
+        print(result)
 
 if __name__ == '__main__':
     dothething()
